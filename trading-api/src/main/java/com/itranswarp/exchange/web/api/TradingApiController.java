@@ -130,7 +130,7 @@ public class TradingApiController extends AbstractApiController {
     public String getDayBars() {
         long end = System.currentTimeMillis();
         long start = end - 366 * 86400_000;
-        return getBars(RedisCache.Key.HOUR_BARS, start, end);
+        return getBars(RedisCache.Key.DAY_BARS, start, end);
     }
 
     @ResponseBody
